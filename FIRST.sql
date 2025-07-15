@@ -1,4 +1,228 @@
 CREATE TABLE DEPOSITA1 (ACTNO VARCHAR2(5), CNAME ,VARCHAR2(18), BNAME VARCHAR2(18), AMOUNT NUMBER(8,2), ADATE DATE);
 CREATE TABLE BRANCHA1 (BNAME VARCHAR2(18), CITY VARCHAR2(18));
 DESC DEPOSITA1;
+SQL> INSERT INTO DEPOSITA1('101','SUNIL','AJNI',5000.00,'4-JAN-96');
+INSERT INTO DEPOSITA1('101','SUNIL','AJNI',5000.00,'4-JAN-96')
+                      *
+ERROR at line 1:
+ORA-00928: missing SELECT keyword
+
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('101','SUNIL','AJNI',5000.00,'4-JAN-96');
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('102','MEHUL','KAROLBAGH',3500.00,'17-NOV');
+INSERT INTO DEPOSITA1 VALUES ('102','MEHUL','KAROLBAGH',3500.00,'17-NOV')
+                                                                *
+ERROR at line 1:
+ORA-01840: input value not long enough for date format
+
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('102','MEHUL','KAROLBAGH',3500.00,'17-NOV-95');
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('103','MADHURI','CHANDI',1200.00,'17-DEC-95');
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('104','PRMOD','M.G.ROAD',3000.00,'27-MAR-96');
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('105','SNADIP','ANDHERI',2000.00,'31-MAR-96');
+
+1 row created.
+
+SQL> INSERT INTO Accounts (ACTNO, CNAME, BNAME, AMOUNT, ADATE) VALUES
+  2  (100, 'ANIL', 'VRCE', 1000.00, '1995-03-01'),
+  3  (101, 'SUNIL', 'AJNI', 5000.00, '1996-01-04'),
+  4  (102, 'MEHUL', 'KAROLBAGH', 3500.00, '1995-11-17'),
+  5  (104, 'MADHURI', 'CHANDI', 1200.00, '1995-12-17'),
+  6  (105, 'PRMOD', 'M.G.ROAD', 3000.00, '1996-03-27'),
+  7  (106, 'SANDIP', 'ANDHERI', 2000.00, '1996-03-31'),
+  8  (107, 'SHIVANI', 'VIRAR', 1000.00, '1995-09-05'),
+  9  (108, 'KRANTI', 'NEHRU PLACE', 5000.00, '1995-07-02'),
+ 10  (109, 'MINU', 'POWAI', 7000.00, '1995-08-10');
+(100, 'ANIL', 'VRCE', 1000.00, '1995-03-01'),
+                                            *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> INSERT INTO Accounts (ACTNO, CNAME, BNAME, AMOUNT, ADATE) VALUES
+  2  (100, 'ANIL', 'VRCE', 1000.00, '1995-03-01'),
+  3  (101, 'SUNIL', 'AJNI', 5000.00, '1996-01-04'),
+  4  (102, 'MEHUL', 'KAROLBAGH', 3500.00, '1995-11-17'),
+  5  (104, 'MADHURI', 'CHANDI', 1200.00, '1995-12-17'),
+  6  (105, 'PRMOD', 'M.G.ROAD', 3000.00, '1996-03-27'),
+  7  (106, 'SANDIP', 'ANDHERI', 2000.00, '1996-03-31'),
+  8  (107, 'SHIVANI', 'VIRAR', 1000.00, '1995-09-05'),
+  9  (108, 'KRANTI', 'NEHRU PLACE', 5000.00, '1995-07-02'),
+ 10  (109, 'MINU', 'POWAI', 7000.00, '1995-08-10');
+(100, 'ANIL', 'VRCE', 1000.00, '1995-03-01'),
+                                            *
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> INSERT INTO DEPOSITA1 VALUES (107, 'SHIVANI', 'VIRAR', 1000.00, '1995-09-05');
+INSERT INTO DEPOSITA1 VALUES (107, 'SHIVANI', 'VIRAR', 1000.00, '1995-09-05')
+                                                                *
+ERROR at line 1:
+ORA-01861: literal does not match format string
+
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('107', 'SHIVANI', 'VIRAR', 1000.00, TO_DATE('05-SEP-95', 'DD-MON-RR'));
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('108', 'KRANTI', 'NEFRU PLACE', 5000.00, TO_DATE('5-SEP-95'));
+
+1 row created.
+
+SQL> INSERT INTO DEPOSITA1 VALUES ('109', 'MINU', 'POWAI', 7000.00, TO_DATE('10-AUG-95', 'DD-MON-RR'));
+
+1 row created.
+
+SQL> INSERT INTO BRANCH VALUES ('VRCE', 'NAGPUR');
+INSERT INTO BRANCH VALUES ('VRCE', 'NAGPUR')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('AJNI', 'NAGPUR');
+INSERT INTO BRANCH VALUES ('AJNI', 'NAGPUR')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('KAROLBAGH', 'DELHI');
+INSERT INTO BRANCH VALUES ('KAROLBAGH', 'DELHI')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('CHANDI', 'DELHI');
+INSERT INTO BRANCH VALUES ('CHANDI', 'DELHI')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('DHARAMPETH', 'NAGPUR');
+INSERT INTO BRANCH VALUES ('DHARAMPETH', 'NAGPUR')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('M.G.ROAD', 'BANGLORE');
+INSERT INTO BRANCH VALUES ('M.G.ROAD', 'BANGLORE')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('ANDHERI', 'BOMBAY');
+INSERT INTO BRANCH VALUES ('ANDHERI', 'BOMBAY')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('VIRAR', 'BOMBAY');
+INSERT INTO BRANCH VALUES ('VIRAR', 'BOMBAY')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('NEHRU PLACE', 'DELHI');
+INSERT INTO BRANCH VALUES ('NEHRU PLACE', 'DELHI')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCH VALUES ('POWAI', 'BOMBAY');
+INSERT INTO BRANCH VALUES ('POWAI', 'BOMBAY')
+            *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> INSERT INTO BRANCHA1 VALUES ('VRCE', 'NAGPUR');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('AJNI', 'NAGPUR');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('KAROLBAGH', 'DELHI');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('CHANDI', 'DELHI');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('DHARAMPETH', 'NAGPUR');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('M.G.ROAD', 'BANGLORE');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('ANDHERI', 'BOMBAY');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('VIRAR', 'BOMBAY');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('NEHRU PLACE', 'DELHI');
+
+1 row created.
+
+SQL> INSERT INTO BRANCHA1 VALUES ('POWAI', 'BOMBAY');
+
+1 row created.
+
+SQL> OWAI', 'BOMBAY');
+SP2-0734: unknown command beginning "OWAI', 'BO..." - rest of line ignored.
+SQL> CREATE TABLE CLIENTS (CNAME VARCHAR2(19), CITY
+  2  VARCHAR2(18));
+CREATE TABLE CLIENTS (CNAME VARCHAR2(19), CITY
+             *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> CREATE TABLE CLIENTSA1(CNAME VARCHAR2(19), CITY
+  2  VARCHAR2(18))
+  3
+SQL>
+SQL>
+SQL>  CREATE TABLE CLIENTSA1 (CNAME VARCHAR2(19), CITYVARCHAR2(18));
+ CREATE TABLE CLIENTSA1 (CNAME VARCHAR2(19), CITYVARCHAR2(18))
+                                                         *
+ERROR at line 1:
+ORA-00902: invalid datatype
+
+
+SQL>  CREATE TABLE CLIENTSA1 (CNAME VARCHAR2(19), CITY VARCHAR2(18));
+
+Table created.
+
+SQL> CREATE TABLE BORROWA1 (LOANNO VARCHAR2(5), CNAME VARCHAR2(18));
+
+Table created.
 
