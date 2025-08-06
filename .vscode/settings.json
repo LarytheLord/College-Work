@@ -2,6 +2,8 @@
     "files.associations": {
         "STAKA02.C": "cpp",
         "FEBONACI.C": "cpp",
-        "ABIQUEA0.C": "cpp"
+        "ABIQUEA0.C": "cpp",
+        "ABI-4.C": "cpp",
+        "ABI-6.C": "cpp"
     }
 }
