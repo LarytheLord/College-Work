@@ -1,5 +1,4 @@
-#incl
-ude<stdio.h>
+#include<stdio.h>
 #include<conio.h>
 #define MAX 5
 
