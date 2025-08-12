@@ -1,0 +1,1686 @@
+SQL*Plus: Release 10.2.0.1.0 - Production on Tue Aug 5 11:44:59 2025
+
+Copyright (c) 1982, 2005, Oracle.  All rights reserved.
+
+Enter user-name: system
+Enter password:
+
+Connected to:
+Oracle Database 10g Express Edition Release 10.2.0.1.0 - Beta
+
+SQL> SELECT * FROM TAB
+  2  SELECT * FROM TAB;
+SELECT * FROM TAB
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT*FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SYSCATALOG                     SYNONYM
+CATALOG                        SYNONYM
+TAB                            SYNONYM
+COL                            SYNONYM
+TABQUOTAS                      SYNONYM
+SYSFILES                       SYNONYM
+PUBLICSYN                      SYNONYM
+MVIEW$_ADV_WORKLOAD            TABLE
+MVIEW$_ADV_BASETABLE           TABLE
+MVIEW$_ADV_SQLDEPEND           TABLE
+MVIEW$_ADV_PRETTY              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_TEMP                TABLE
+MVIEW$_ADV_FILTER              TABLE
+MVIEW$_ADV_LOG                 TABLE
+MVIEW$_ADV_FILTERINSTANCE      TABLE
+MVIEW$_ADV_LEVEL               TABLE
+MVIEW$_ADV_ROLLUP              TABLE
+MVIEW$_ADV_AJG                 TABLE
+MVIEW$_ADV_FJG                 TABLE
+MVIEW$_ADV_GC                  TABLE
+MVIEW$_ADV_CLIQUE              TABLE
+MVIEW$_ADV_ELIGIBLE            TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_OUTPUT              TABLE
+MVIEW$_ADV_EXCEPTIONS          TABLE
+MVIEW$_ADV_PARAMETERS          TABLE
+MVIEW$_ADV_INFO                TABLE
+MVIEW$_ADV_JOURNAL             TABLE
+MVIEW$_ADV_PLAN                TABLE
+MVIEW_WORKLOAD                 VIEW
+MVIEW_FILTER                   VIEW
+MVIEW_LOG                      VIEW
+MVIEW_FILTERINSTANCE           VIEW
+MVIEW_RECOMMENDATIONS          VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW_EVALUATIONS              VIEW
+MVIEW_EXCEPTIONS               VIEW
+AQ$_QUEUE_TABLES               TABLE
+AQ$_QUEUES                     TABLE
+AQ$_SCHEDULES                  TABLE
+AQ$_INTERNET_AGENTS            TABLE
+AQ$_INTERNET_AGENT_PRIVS       TABLE
+DEF$_AQCALL                    TABLE
+DEF$_AQERROR                   TABLE
+AQ$_DEF$_AQCALL_F              VIEW
+AQ$DEF$_AQCALL                 VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEF$_ERROR                     TABLE
+AQ$_DEF$_AQERROR_F             VIEW
+AQ$DEF$_AQERROR                VIEW
+DEF$_DESTINATION               TABLE
+DEF$_CALLDEST                  TABLE
+DEF$_DEFAULTDEST               TABLE
+DEF$_LOB                       TABLE
+DEF$_TEMP$LOB                  TABLE
+DEF$_PROPAGATOR                TABLE
+DEF$_ORIGIN                    TABLE
+DEF$_PUSHED_TRANSACTIONS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+OL$                            TABLE
+OL$HINTS                       TABLE
+OL$NODES                       TABLE
+LOGMNR_SESSION_EVOLVE$         TABLE
+LOGMNR_HEADER1$                TABLE
+LOGMNR_HEADER2$                TABLE
+LOGMNR_UID$                    TABLE
+LOGMNRC_DBNAME_UID_MAP         TABLE
+LOGMNR_DICTSTATE$              TABLE
+LOGMNR_DICTIONARY$             TABLE
+LOGMNR_OBJ$                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_USER$                   TABLE
+LOGMNRC_GTLO                   TABLE
+LOGMNRC_GTCS                   TABLE
+LOGMNRC_GSII                   TABLE
+LOGMNR_TAB$                    TABLE
+LOGMNR_COL$                    TABLE
+LOGMNR_ATTRCOL$                TABLE
+LOGMNR_TS$                     TABLE
+LOGMNR_IND$                    TABLE
+LOGMNR_TABPART$                TABLE
+LOGMNR_TABSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_TABCOMPART$             TABLE
+LOGMNR_TYPE$                   TABLE
+LOGMNR_COLTYPE$                TABLE
+LOGMNR_ATTRIBUTE$              TABLE
+LOGMNR_LOB$                    TABLE
+LOGMNR_CDEF$                   TABLE
+LOGMNR_CCOL$                   TABLE
+LOGMNR_ICOL$                   TABLE
+LOGMNR_LOBFRAG$                TABLE
+LOGMNR_INDPART$                TABLE
+LOGMNR_INDSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_INDCOMPART$             TABLE
+LOGMNRP_CTAS_PART_MAP          TABLE
+LOGMNRT_MDDL$                  TABLE
+LOGMNR_LOG$                    TABLE
+LOGMNR_PROCESSED_LOG$          TABLE
+LOGMNR_SPILL$                  TABLE
+LOGMNR_AGE_SPILL$              TABLE
+LOGMNR_RESTART_CKPT_TXINFO$    TABLE
+LOGMNR_ERROR$                  TABLE
+LOGMNR_RESTART_CKPT$           TABLE
+LOGMNR_FILTER$                 TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_PARAMETER$              TABLE
+LOGMNR_SESSION$                TABLE
+LOGSTDBY$PARAMETERS            TABLE
+LOGSTDBY$EVENTS                TABLE
+LOGSTDBY$APPLY_PROGRESS        TABLE
+LOGSTDBY$APPLY_MILESTONE       TABLE
+LOGSTDBY$SCN                   TABLE
+LOGSTDBY$PLSQL                 TABLE
+LOGSTDBY$SKIP_TRANSACTION      TABLE
+LOGSTDBY$SKIP                  TABLE
+LOGSTDBY$SKIP_SUPPORT          TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGSTDBY$HISTORY               TABLE
+REPCAT$_REPCAT                 TABLE
+REPCAT$_FLAVORS                TABLE
+REPCAT$_REPSCHEMA              TABLE
+REPCAT$_SNAPGROUP              TABLE
+REPCAT$_REPOBJECT              TABLE
+REPCAT$_REPCOLUMN              TABLE
+REPCAT$_KEY_COLUMNS            TABLE
+REPCAT$_GENERATED              TABLE
+REPCAT$_REPPROP                TABLE
+REPCAT$_REPCATLOG              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_DDL                    TABLE
+REPCAT$_REPGROUP_PRIVS         TABLE
+REPCAT$_PRIORITY_GROUP         TABLE
+REPCAT$_PRIORITY               TABLE
+REPCAT$_COLUMN_GROUP           TABLE
+REPCAT$_GROUPED_COLUMN         TABLE
+REPCAT$_CONFLICT               TABLE
+REPCAT$_RESOLUTION_METHOD      TABLE
+REPCAT$_RESOLUTION             TABLE
+REPCAT$_RESOLUTION_STATISTICS  TABLE
+REPCAT$_RESOL_STATS_CONTROL    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_PARAMETER_COLUMN       TABLE
+REPCAT$_AUDIT_ATTRIBUTE        TABLE
+REPCAT$_AUDIT_COLUMN           TABLE
+REPCAT$_FLAVOR_OBJECTS         TABLE
+REPCAT$_TEMPLATE_STATUS        TABLE
+REPCAT$_TEMPLATE_TYPES         TABLE
+REPCAT$_REFRESH_TEMPLATES      TABLE
+REPCAT$_USER_AUTHORIZATIONS    TABLE
+REPCAT$_OBJECT_TYPES           TABLE
+REPCAT$_TEMPLATE_REFGROUPS     TABLE
+REPCAT$_TEMPLATE_OBJECTS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_TEMPLATE_PARMS         TABLE
+REPCAT$_OBJECT_PARMS           TABLE
+REPCAT$_USER_PARM_VALUES       TABLE
+REPCAT$_TEMPLATE_SITES         TABLE
+REPCAT$_SITE_OBJECTS           TABLE
+REPCAT$_RUNTIME_PARMS          TABLE
+REPCAT$_TEMPLATE_TARGETS       TABLE
+REPCAT$_EXCEPTIONS             TABLE
+REPCAT$_INSTANTIATION_DDL      TABLE
+REPCAT$_EXTENSION              TABLE
+REPCAT$_SITES_NEW              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SQLPLUS_PRODUCT_PROFILE        TABLE
+PRODUCT_PRIVS                  VIEW
+PRODUCT_USER_PROFILE           SYNONYM
+HELP                           TABLE
+DEPOSIT_E2                     TABLE
+DEPOSIT                        TABLE
+BRANCH_E2                      TABLE
+DEPOSITA2                      TABLE
+BRANCHA2                       TABLE
+CLIENTS                        TABLE
+BORROWA2                       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPOSITA1                      TABLE
+BRANCHA1                       TABLE
+CLIENTSA1                      TABLE
+BORROWA1                       TABLE
+BRANCHAE3                      TABLE
+DEPOSIT_B1                     TABLE
+BRANCH_B1                      TABLE
+DEPOSITAE3                     TABLE
+BORROW                         TABLE
+DEPOSIT_E3                     TABLE
+BBRANCH_E3                     TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPOSIT_E_2                    TABLE
+CUSTOMERAE3                    TABLE
+CUSTOMER_E2                    TABLE
+CUSTOMER                       TABLE
+BORROW_B1                      TABLE
+CUSTOMERS_B1                   TABLE
+BORROWAE3                      TABLE
+EMP_E2                         TABLE
+BORROW_E3                      TABLE
+CUSTOMERS_E3                   TABLE
+DEPT_E2                        TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+EMPE2                          TABLE
+DEPTE2                         TABLE
+EMPAE3                         TABLE
+DEPTAE3                        TABLE
+EMPLOYEE_E3                    TABLE
+DEPT_E3                        TABLE
+
+193 rows selected.
+
+SQL> DESC DEPOSITA1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BNAME                                              VARCHAR2(18)
+ AMOUNT                                             NUMBER(8,2)
+ ADATE                                              DATE
+
+SQL> SELECT*FROM DEPOSITA1
+  2  SELECT*FROM DEPOSITA1;
+SELECT*FROM DEPOSITA1
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT*FROM'DEPOSITA1';
+SELECT*FROM'DEPOSITA1'
+           *
+ERROR at line 1:
+ORA-00903: invalid table name
+
+
+SQL> SELECT * FROM DEPOSITA1;
+
+ACTNO CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+101   SUNIL              AJNI                     5000 04-JAN-96
+102   MEHUL              KAROLBAGH                3500 17-NOV-95
+103   MADHURI            CHANDI                   1200 17-DEC-95
+104   PRMOD              M.G.ROAD                 3000 27-MAR-96
+105   SNADIP             ANDHERI                  2000 31-MAR-96
+107   SHIVANI            VIRAR                    1000 05-SEP-95
+108   KRANTI             NEFRU PLACE              5000 05-SEP-95
+109   MINU               POWAI                    7000 10-AUG-95
+
+8 rows selected.
+
+SQL> INSERT INTO DEPOSITA1 VALUES(BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+INSERT INTO DEPOSITA1 VALUES(BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                                        *
+ERROR at line 1:
+ORA-00917: missing comma
+
+
+SQL> INSERT INTO DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+INSERT INTO DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                                         *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL>
+SQL>
+SQL> UPDATE INTO DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+UPDATE INTO DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+       *
+ERROR at line 1:
+ORA-00903: invalid table name
+
+
+SQL>
+SQL> UPDATE DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+UPDATE DEPOSITA1 VALUES(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                 *
+ERROR at line 1:
+ORA-00971: missing SET keyword
+
+
+SQL>
+SQL> UPDATE DEPOSITA1 COLUMN(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+UPDATE DEPOSITA1 COLUMN(BRANCHNAME ,VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                 *
+ERROR at line 1:
+ORA-00971: missing SET keyword
+
+
+SQL>
+SQL> ALTER TABLE DEPOSITA1 ADD (BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 ADD (BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                                                    *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+SQL> DESC DEPOSITA1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTNO                                              VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BNAME                                              VARCHAR2(18)
+ AMOUNT                                             NUMBER(8,2)
+ ADATE                                              DATE
+
+SQL> DESC BORROWA1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+
+SQL> ALTER TABLE DEPOSITA1 ADD (BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 ADD (BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6))
+                                                    *
+ERROR at line 1:
+ORA-01430: column being added already exists in table
+
+
+SQL> ALTER TABLE BORROWA1 ADD (BRANCHNAME VARCHAR2(20), AMOUNT NUMBER(8,2), PINCODE VARCHAR2(6));
+
+Table altered.
+
+SQL> DESC BORROWA1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BRANCHNAME                                         VARCHAR2(20)
+ AMOUNT                                             NUMBER(8,2)
+ PINCODE                                            VARCHAR2(6)
+
+SQL> ALTER TABLE DEPOSITA1 DELETE (PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 DELETE (PINCODE VARCHAR2(6))
+                      *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> ALTER TABLE DEPOSITA1 DELETE (PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 DELETE (PINCODE VARCHAR2(6))
+                      *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> ALTER TABLE DEPOSITA1 DELETE(PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 DELETE(PINCODE VARCHAR2(6))
+                      *
+ERROR at line 1:
+ORA-01735: invalid ALTER TABLE option
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP (PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 DROP (PINCODE VARCHAR2(6))
+                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP (PINCODE);
+ALTER TABLE DEPOSITA1 DROP (PINCODE)
+                            *
+ERROR at line 1:
+ORA-00904: "PINCODE": invalid identifier
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE;
+ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE
+                                  *
+ERROR at line 1:
+ORA-00904: "PINCODE": invalid identifier
+
+
+SQL>
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN (PINCODE);
+ALTER TABLE DEPOSITA1 DROP COLUMN (PINCODE)
+                                  *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN(PINCODE);
+ALTER TABLE DEPOSITA1 DROP COLUMN(PINCODE)
+                                 *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SQL>
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE;
+ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE
+                                  *
+ERROR at line 1:
+ORA-00904: "PINCODE": invalid identifier
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN 'PINCODE';
+ALTER TABLE DEPOSITA1 DROP COLUMN 'PINCODE'
+                                  *
+ERROR at line 1:
+ORA-00904: : invalid identifier
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE;
+ALTER TABLE DEPOSITA1 DROP COLUMN PINCODE
+                                  *
+ERROR at line 1:
+ORA-00904: "PINCODE": invalid identifier
+
+
+SQL> ALTER TABLE DEPOSITA1 DROP (PINCODE VARCHAR2(6));
+ALTER TABLE DEPOSITA1 DROP (PINCODE VARCHAR2(6))
+                                    *
+ERROR at line 1:
+ORA-00907: missing right parenthesis
+
+
+SQL> ALTER TABLE BORROWA1 DROP (PINCODE);
+
+Table altered.
+
+SQL> DESC BORROWA1
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BRANCHNAME                                         VARCHAR2(20)
+ AMOUNT                                             NUMBER(8,2)
+
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SYSCATALOG                     SYNONYM
+CATALOG                        SYNONYM
+TAB                            SYNONYM
+COL                            SYNONYM
+TABQUOTAS                      SYNONYM
+SYSFILES                       SYNONYM
+PUBLICSYN                      SYNONYM
+MVIEW$_ADV_WORKLOAD            TABLE
+MVIEW$_ADV_BASETABLE           TABLE
+MVIEW$_ADV_SQLDEPEND           TABLE
+MVIEW$_ADV_PRETTY              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_TEMP                TABLE
+MVIEW$_ADV_FILTER              TABLE
+MVIEW$_ADV_LOG                 TABLE
+MVIEW$_ADV_FILTERINSTANCE      TABLE
+MVIEW$_ADV_LEVEL               TABLE
+MVIEW$_ADV_ROLLUP              TABLE
+MVIEW$_ADV_AJG                 TABLE
+MVIEW$_ADV_FJG                 TABLE
+MVIEW$_ADV_GC                  TABLE
+MVIEW$_ADV_CLIQUE              TABLE
+MVIEW$_ADV_ELIGIBLE            TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_OUTPUT              TABLE
+MVIEW$_ADV_EXCEPTIONS          TABLE
+MVIEW$_ADV_PARAMETERS          TABLE
+MVIEW$_ADV_INFO                TABLE
+MVIEW$_ADV_JOURNAL             TABLE
+MVIEW$_ADV_PLAN                TABLE
+MVIEW_WORKLOAD                 VIEW
+MVIEW_FILTER                   VIEW
+MVIEW_LOG                      VIEW
+MVIEW_FILTERINSTANCE           VIEW
+MVIEW_RECOMMENDATIONS          VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW_EVALUATIONS              VIEW
+MVIEW_EXCEPTIONS               VIEW
+AQ$_QUEUE_TABLES               TABLE
+AQ$_QUEUES                     TABLE
+AQ$_SCHEDULES                  TABLE
+AQ$_INTERNET_AGENTS            TABLE
+AQ$_INTERNET_AGENT_PRIVS       TABLE
+DEF$_AQCALL                    TABLE
+DEF$_AQERROR                   TABLE
+AQ$_DEF$_AQCALL_F              VIEW
+AQ$DEF$_AQCALL                 VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEF$_ERROR                     TABLE
+AQ$_DEF$_AQERROR_F             VIEW
+AQ$DEF$_AQERROR                VIEW
+DEF$_DESTINATION               TABLE
+DEF$_CALLDEST                  TABLE
+DEF$_DEFAULTDEST               TABLE
+DEF$_LOB                       TABLE
+DEF$_TEMP$LOB                  TABLE
+DEF$_PROPAGATOR                TABLE
+DEF$_ORIGIN                    TABLE
+DEF$_PUSHED_TRANSACTIONS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+OL$                            TABLE
+OL$HINTS                       TABLE
+OL$NODES                       TABLE
+LOGMNR_SESSION_EVOLVE$         TABLE
+LOGMNR_HEADER1$                TABLE
+LOGMNR_HEADER2$                TABLE
+LOGMNR_UID$                    TABLE
+LOGMNRC_DBNAME_UID_MAP         TABLE
+LOGMNR_DICTSTATE$              TABLE
+LOGMNR_DICTIONARY$             TABLE
+LOGMNR_OBJ$                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_USER$                   TABLE
+LOGMNRC_GTLO                   TABLE
+LOGMNRC_GTCS                   TABLE
+LOGMNRC_GSII                   TABLE
+LOGMNR_TAB$                    TABLE
+LOGMNR_COL$                    TABLE
+LOGMNR_ATTRCOL$                TABLE
+LOGMNR_TS$                     TABLE
+LOGMNR_IND$                    TABLE
+LOGMNR_TABPART$                TABLE
+LOGMNR_TABSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_TABCOMPART$             TABLE
+LOGMNR_TYPE$                   TABLE
+LOGMNR_COLTYPE$                TABLE
+LOGMNR_ATTRIBUTE$              TABLE
+LOGMNR_LOB$                    TABLE
+LOGMNR_CDEF$                   TABLE
+LOGMNR_CCOL$                   TABLE
+LOGMNR_ICOL$                   TABLE
+LOGMNR_LOBFRAG$                TABLE
+LOGMNR_INDPART$                TABLE
+LOGMNR_INDSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_INDCOMPART$             TABLE
+LOGMNRP_CTAS_PART_MAP          TABLE
+LOGMNRT_MDDL$                  TABLE
+LOGMNR_LOG$                    TABLE
+LOGMNR_PROCESSED_LOG$          TABLE
+LOGMNR_SPILL$                  TABLE
+LOGMNR_AGE_SPILL$              TABLE
+LOGMNR_RESTART_CKPT_TXINFO$    TABLE
+LOGMNR_ERROR$                  TABLE
+LOGMNR_RESTART_CKPT$           TABLE
+LOGMNR_FILTER$                 TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_PARAMETER$              TABLE
+LOGMNR_SESSION$                TABLE
+LOGSTDBY$PARAMETERS            TABLE
+LOGSTDBY$EVENTS                TABLE
+LOGSTDBY$APPLY_PROGRESS        TABLE
+LOGSTDBY$APPLY_MILESTONE       TABLE
+LOGSTDBY$SCN                   TABLE
+LOGSTDBY$PLSQL                 TABLE
+LOGSTDBY$SKIP_TRANSACTION      TABLE
+LOGSTDBY$SKIP                  TABLE
+LOGSTDBY$SKIP_SUPPORT          TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGSTDBY$HISTORY               TABLE
+REPCAT$_REPCAT                 TABLE
+REPCAT$_FLAVORS                TABLE
+REPCAT$_REPSCHEMA              TABLE
+REPCAT$_SNAPGROUP              TABLE
+REPCAT$_REPOBJECT              TABLE
+REPCAT$_REPCOLUMN              TABLE
+REPCAT$_KEY_COLUMNS            TABLE
+REPCAT$_GENERATED              TABLE
+REPCAT$_REPPROP                TABLE
+REPCAT$_REPCATLOG              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_DDL                    TABLE
+REPCAT$_REPGROUP_PRIVS         TABLE
+REPCAT$_PRIORITY_GROUP         TABLE
+REPCAT$_PRIORITY               TABLE
+REPCAT$_COLUMN_GROUP           TABLE
+REPCAT$_GROUPED_COLUMN         TABLE
+REPCAT$_CONFLICT               TABLE
+REPCAT$_RESOLUTION_METHOD      TABLE
+REPCAT$_RESOLUTION             TABLE
+REPCAT$_RESOLUTION_STATISTICS  TABLE
+REPCAT$_RESOL_STATS_CONTROL    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_PARAMETER_COLUMN       TABLE
+REPCAT$_AUDIT_ATTRIBUTE        TABLE
+REPCAT$_AUDIT_COLUMN           TABLE
+REPCAT$_FLAVOR_OBJECTS         TABLE
+REPCAT$_TEMPLATE_STATUS        TABLE
+REPCAT$_TEMPLATE_TYPES         TABLE
+REPCAT$_REFRESH_TEMPLATES      TABLE
+REPCAT$_USER_AUTHORIZATIONS    TABLE
+REPCAT$_OBJECT_TYPES           TABLE
+REPCAT$_TEMPLATE_REFGROUPS     TABLE
+REPCAT$_TEMPLATE_OBJECTS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_TEMPLATE_PARMS         TABLE
+REPCAT$_OBJECT_PARMS           TABLE
+REPCAT$_USER_PARM_VALUES       TABLE
+REPCAT$_TEMPLATE_SITES         TABLE
+REPCAT$_SITE_OBJECTS           TABLE
+REPCAT$_RUNTIME_PARMS          TABLE
+REPCAT$_TEMPLATE_TARGETS       TABLE
+REPCAT$_EXCEPTIONS             TABLE
+REPCAT$_INSTANTIATION_DDL      TABLE
+REPCAT$_EXTENSION              TABLE
+REPCAT$_SITES_NEW              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SQLPLUS_PRODUCT_PROFILE        TABLE
+PRODUCT_PRIVS                  VIEW
+PRODUCT_USER_PROFILE           SYNONYM
+HELP                           TABLE
+DEPOSIT_E2                     TABLE
+DEPOSIT                        TABLE
+BRANCH_E2                      TABLE
+DEPOSITA2                      TABLE
+BRANCHA2                       TABLE
+CLIENTS                        TABLE
+BORROWA2                       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPOSITA1                      TABLE
+BRANCHA1                       TABLE
+CLIENTSA1                      TABLE
+BORROWA1                       TABLE
+BRANCHAE3                      TABLE
+DEPOSIT_B1                     TABLE
+BRANCH_B1                      TABLE
+DEPOSITAE3                     TABLE
+BORROW                         TABLE
+DEPOSIT_E3                     TABLE
+BBRANCH_E3                     TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPOSIT_E_2                    TABLE
+CUSTOMERAE3                    TABLE
+CUSTOMER_E2                    TABLE
+CUSTOMER                       TABLE
+BORROW_B1                      TABLE
+CUSTOMERS_B1                   TABLE
+BORROWAE3                      TABLE
+EMP_E2                         TABLE
+BORROW_E3                      TABLE
+CUSTOMERS_E3                   TABLE
+DEPT_E2                        TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+EMPE2                          TABLE
+DEPTE2                         TABLE
+EMPAE3                         TABLE
+DEPTAE3                        TABLE
+EMPLOYEE_E3                    TABLE
+DEPT_E3                        TABLE
+
+193 rows selected.
+
+SQL> RENAME CUSTOMERAE3 TO CUSTOMERA02;
+
+Table renamed.
+
+SQL> RENAME BORROWAE3 TO BORROWA02;
+
+Table renamed.
+
+SQL> RENAME DEPOSITA1 TO DEPOSITA02;
+
+Table renamed.
+
+SQL> RENAME EMPE2 TO EMPA02;
+
+Table renamed.
+
+SQL> RENAME DEPTAE3 TO DEPTA02;
+
+Table renamed.
+
+SQL> DESC BORROWA02
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ LOANNO                                             VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BNAME                                              VARCHAR2(18)
+ AMOUNT                                             NUMBER(8,2)
+
+SQL> SELECT * FROM TABLE DEPOSIT;
+SELECT * FROM TABLE DEPOSIT
+                    *
+ERROR at line 1:
+ORA-00906: missing left parenthesis
+
+
+SQL> SELECT * FROM DEPOSIT;
+
+no rows selected
+
+SQL> SELECT * FROM DEPOSIT COLUMN;
+SELECT * FROM DEPOSIT COLUMN
+                      *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT * FROM DEPOSITA02;
+
+ACTNO CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+101   SUNIL              AJNI                     5000 04-JAN-96
+102   MEHUL              KAROLBAGH                3500 17-NOV-95
+103   MADHURI            CHANDI                   1200 17-DEC-95
+104   PRMOD              M.G.ROAD                 3000 27-MAR-96
+105   SNADIP             ANDHERI                  2000 31-MAR-96
+107   SHIVANI            VIRAR                    1000 05-SEP-95
+108   KRANTI             NEFRU PLACE              5000 05-SEP-95
+109   MINU               POWAI                    7000 10-AUG-95
+
+8 rows selected.
+
+SQL> SELECT * FROM BRANCH;
+SELECT * FROM BRANCH
+              *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SYSCATALOG                     SYNONYM
+CATALOG                        SYNONYM
+TAB                            SYNONYM
+COL                            SYNONYM
+TABQUOTAS                      SYNONYM
+SYSFILES                       SYNONYM
+PUBLICSYN                      SYNONYM
+MVIEW$_ADV_WORKLOAD            TABLE
+MVIEW$_ADV_BASETABLE           TABLE
+MVIEW$_ADV_SQLDEPEND           TABLE
+MVIEW$_ADV_PRETTY              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_TEMP                TABLE
+MVIEW$_ADV_FILTER              TABLE
+MVIEW$_ADV_LOG                 TABLE
+MVIEW$_ADV_FILTERINSTANCE      TABLE
+MVIEW$_ADV_LEVEL               TABLE
+MVIEW$_ADV_ROLLUP              TABLE
+MVIEW$_ADV_AJG                 TABLE
+MVIEW$_ADV_FJG                 TABLE
+MVIEW$_ADV_GC                  TABLE
+MVIEW$_ADV_CLIQUE              TABLE
+MVIEW$_ADV_ELIGIBLE            TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_OUTPUT              TABLE
+MVIEW$_ADV_EXCEPTIONS          TABLE
+MVIEW$_ADV_PARAMETERS          TABLE
+MVIEW$_ADV_INFO                TABLE
+MVIEW$_ADV_JOURNAL             TABLE
+MVIEW$_ADV_PLAN                TABLE
+MVIEW_WORKLOAD                 VIEW
+MVIEW_FILTER                   VIEW
+MVIEW_LOG                      VIEW
+MVIEW_FILTERINSTANCE           VIEW
+MVIEW_RECOMMENDATIONS          VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW_EVALUATIONS              VIEW
+MVIEW_EXCEPTIONS               VIEW
+AQ$_QUEUE_TABLES               TABLE
+AQ$_QUEUES                     TABLE
+AQ$_SCHEDULES                  TABLE
+AQ$_INTERNET_AGENTS            TABLE
+AQ$_INTERNET_AGENT_PRIVS       TABLE
+DEF$_AQCALL                    TABLE
+DEF$_AQERROR                   TABLE
+AQ$_DEF$_AQCALL_F              VIEW
+AQ$DEF$_AQCALL                 VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEF$_ERROR                     TABLE
+AQ$_DEF$_AQERROR_F             VIEW
+AQ$DEF$_AQERROR                VIEW
+DEF$_DESTINATION               TABLE
+DEF$_CALLDEST                  TABLE
+DEF$_DEFAULTDEST               TABLE
+DEF$_LOB                       TABLE
+DEF$_TEMP$LOB                  TABLE
+DEF$_PROPAGATOR                TABLE
+DEF$_ORIGIN                    TABLE
+DEF$_PUSHED_TRANSACTIONS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+OL$                            TABLE
+OL$HINTS                       TABLE
+OL$NODES                       TABLE
+LOGMNR_SESSION_EVOLVE$         TABLE
+LOGMNR_HEADER1$                TABLE
+LOGMNR_HEADER2$                TABLE
+LOGMNR_UID$                    TABLE
+LOGMNRC_DBNAME_UID_MAP         TABLE
+LOGMNR_DICTSTATE$              TABLE
+LOGMNR_DICTIONARY$             TABLE
+LOGMNR_OBJ$                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_USER$                   TABLE
+LOGMNRC_GTLO                   TABLE
+LOGMNRC_GTCS                   TABLE
+LOGMNRC_GSII                   TABLE
+LOGMNR_TAB$                    TABLE
+LOGMNR_COL$                    TABLE
+LOGMNR_ATTRCOL$                TABLE
+LOGMNR_TS$                     TABLE
+LOGMNR_IND$                    TABLE
+LOGMNR_TABPART$                TABLE
+LOGMNR_TABSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_TABCOMPART$             TABLE
+LOGMNR_TYPE$                   TABLE
+LOGMNR_COLTYPE$                TABLE
+LOGMNR_ATTRIBUTE$              TABLE
+LOGMNR_LOB$                    TABLE
+LOGMNR_CDEF$                   TABLE
+LOGMNR_CCOL$                   TABLE
+LOGMNR_ICOL$                   TABLE
+LOGMNR_LOBFRAG$                TABLE
+LOGMNR_INDPART$                TABLE
+LOGMNR_INDSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_INDCOMPART$             TABLE
+LOGMNRP_CTAS_PART_MAP          TABLE
+LOGMNRT_MDDL$                  TABLE
+LOGMNR_LOG$                    TABLE
+LOGMNR_PROCESSED_LOG$          TABLE
+LOGMNR_SPILL$                  TABLE
+LOGMNR_AGE_SPILL$              TABLE
+LOGMNR_RESTART_CKPT_TXINFO$    TABLE
+LOGMNR_ERROR$                  TABLE
+LOGMNR_RESTART_CKPT$           TABLE
+LOGMNR_FILTER$                 TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_PARAMETER$              TABLE
+LOGMNR_SESSION$                TABLE
+LOGSTDBY$PARAMETERS            TABLE
+LOGSTDBY$EVENTS                TABLE
+LOGSTDBY$APPLY_PROGRESS        TABLE
+LOGSTDBY$APPLY_MILESTONE       TABLE
+LOGSTDBY$SCN                   TABLE
+LOGSTDBY$PLSQL                 TABLE
+LOGSTDBY$SKIP_TRANSACTION      TABLE
+LOGSTDBY$SKIP                  TABLE
+LOGSTDBY$SKIP_SUPPORT          TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGSTDBY$HISTORY               TABLE
+REPCAT$_REPCAT                 TABLE
+REPCAT$_FLAVORS                TABLE
+REPCAT$_REPSCHEMA              TABLE
+REPCAT$_SNAPGROUP              TABLE
+REPCAT$_REPOBJECT              TABLE
+REPCAT$_REPCOLUMN              TABLE
+REPCAT$_KEY_COLUMNS            TABLE
+REPCAT$_GENERATED              TABLE
+REPCAT$_REPPROP                TABLE
+REPCAT$_REPCATLOG              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_DDL                    TABLE
+REPCAT$_REPGROUP_PRIVS         TABLE
+REPCAT$_PRIORITY_GROUP         TABLE
+REPCAT$_PRIORITY               TABLE
+REPCAT$_COLUMN_GROUP           TABLE
+REPCAT$_GROUPED_COLUMN         TABLE
+REPCAT$_CONFLICT               TABLE
+REPCAT$_RESOLUTION_METHOD      TABLE
+REPCAT$_RESOLUTION             TABLE
+REPCAT$_RESOLUTION_STATISTICS  TABLE
+REPCAT$_RESOL_STATS_CONTROL    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_PARAMETER_COLUMN       TABLE
+REPCAT$_AUDIT_ATTRIBUTE        TABLE
+REPCAT$_AUDIT_COLUMN           TABLE
+REPCAT$_FLAVOR_OBJECTS         TABLE
+REPCAT$_TEMPLATE_STATUS        TABLE
+REPCAT$_TEMPLATE_TYPES         TABLE
+REPCAT$_REFRESH_TEMPLATES      TABLE
+REPCAT$_USER_AUTHORIZATIONS    TABLE
+REPCAT$_OBJECT_TYPES           TABLE
+REPCAT$_TEMPLATE_REFGROUPS     TABLE
+REPCAT$_TEMPLATE_OBJECTS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_TEMPLATE_PARMS         TABLE
+REPCAT$_OBJECT_PARMS           TABLE
+REPCAT$_USER_PARM_VALUES       TABLE
+REPCAT$_TEMPLATE_SITES         TABLE
+REPCAT$_SITE_OBJECTS           TABLE
+REPCAT$_RUNTIME_PARMS          TABLE
+REPCAT$_TEMPLATE_TARGETS       TABLE
+REPCAT$_EXCEPTIONS             TABLE
+REPCAT$_INSTANTIATION_DDL      TABLE
+REPCAT$_EXTENSION              TABLE
+REPCAT$_SITES_NEW              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SQLPLUS_PRODUCT_PROFILE        TABLE
+PRODUCT_PRIVS                  VIEW
+PRODUCT_USER_PROFILE           SYNONYM
+HELP                           TABLE
+DEPOSIT_E2                     TABLE
+DEPOSIT                        TABLE
+BRANCH_E2                      TABLE
+DEPOSITA2                      TABLE
+BRANCHA2                       TABLE
+CLIENTS                        TABLE
+BORROWA2                       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+BRANCHA1                       TABLE
+CLIENTSA1                      TABLE
+BORROWA1                       TABLE
+BRANCHAE3                      TABLE
+DEPOSIT_B1                     TABLE
+BRANCH_B1                      TABLE
+DEPOSITAE3                     TABLE
+BORROW                         TABLE
+DEPOSIT_E3                     TABLE
+BBRANCH_E3                     TABLE
+DEPOSIT_E_2                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+CUSTOMER_E2                    TABLE
+CUSTOMER                       TABLE
+BORROW_B1                      TABLE
+CUSTOMERS_B1                   TABLE
+EMP_E2                         TABLE
+BORROW_E3                      TABLE
+CUSTOMERS_E3                   TABLE
+DEPT_E2                        TABLE
+DEPTE2                         TABLE
+EMPAE3                         TABLE
+EMPLOYEE_E3                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPT_E3                        TABLE
+CUSTOMERA02                    TABLE
+BORROWA02                      TABLE
+DEPOSITA02                     TABLE
+EMPA02                         TABLE
+DEPTA02                        TABLE
+
+193 rows selected.
+
+SQL> SELECT * FROM BRANCH_B1;
+
+BNAME              CITY
+------------------ ------------------
+VRCE               NAGPUR
+AJNI               NAGPUR
+KAROLBAGH          DELHI
+CHANDI             DELHI
+DHARAMPETH         NAGPUR
+M.G.ROAD           BANGLORE
+ANDHERI            BOMBAY
+VIRAR              BOMBAY
+NEHRU PLACE        DELHI
+POWAI              BOMBAY
+
+10 rows selected.
+
+SQL> RENAME BRANCH_B1 TO BRANCHA02;
+
+Table renamed.
+
+SQL> RENAME BRANCH_B1 TO BRANCHA
+  2
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL>
+SQL> RENAME DEPOSITA2 TO DEPOSITA02;
+RENAME DEPOSITA2 TO DEPOSITA02
+                    *
+ERROR at line 1:
+ORA-00955: name is already used by an existing object
+
+
+SQL> RENAME DEPOSITA02 TO DEPOSITA1;
+
+Table renamed.
+
+SQL> RENAME DEPOSITA2 TO DEPOSITA02;
+
+Table renamed.
+
+SQL> SELECT ACTNO, AMOUNT FROM DEPOSITA02;
+SELECT ACTNO, AMOUNT FROM DEPOSITA02
+       *
+ERROR at line 1:
+ORA-00904: "ACTNO": invalid identifier
+
+
+SQL> DESC DEPOSITA02
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ ACTO                                               VARCHAR2(5)
+ CNAME                                              VARCHAR2(18)
+ BNAME                                              VARCHAR2(18)
+ AMOUNT                                             NUMBER(8,2)
+ ADATE                                              DATE
+
+SQL> SELECT ACTO, AMOUNT FROM DEPOSITA02;
+
+ACTO      AMOUNT
+----- ----------
+100         1000
+101         5000
+102         3500
+104         1200
+105         3000
+106         2000
+107         1000
+108         5000
+109         7000
+
+9 rows selected.
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE AMOUNT>4000;
+
+CNAME
+------------------
+SUNIL
+KRANTI
+MINU
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-DEC-96';
+
+no rows selected
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'1-DEC-96';
+
+no rows selected
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-DEC-96';
+
+no rows selected
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-96';
+
+CNAME
+------------------
+SUNIL
+PRMOD
+SANDIP
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' & <'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' & <'25-07-95'
+                                                     *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' && <'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' && <'25-07-95'
+                                                     *
+ERROR at line 1:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' AND <'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95' AND <'25-07-95'
+                                                         *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND ADATE<'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND ADATE<'25-07-95'
+                                                              *
+ERROR at line 1:
+ORA-01843: not a valid month
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND <'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND <'25-07-95'
+                                                        *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND<'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND<'25-07-95'
+                                                       *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND ADATE<'25-07-95';
+SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND ADATE<'25-07-95'
+                                                              *
+ERROR at line 1:
+ORA-01843: not a valid month
+
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE ADATE>'01-JAN-95'AND ADATE<'25-JUL-95';
+
+CNAME
+------------------
+ANIL
+KRANTI
+
+SQL> SELECT EMPNO FROM EMP02 WHERE DEPTNO>10 AND DEPTNO<20;
+SELECT EMPNO FROM EMP02 WHERE DEPTNO>10 AND DEPTNO<20
+                  *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL> SELECT EMPNO FROM EMPA02 WHERE DEPTNO>10 AND DEPTNO<20;
+
+no rows selected
+
+SQL> SELECT EMPNO, ENAME, DEPTNO FROM EMP02 WHERE DEPTNO>=10 AND DEPTNO=<20;
+SELECT EMPNO, ENAME, DEPTNO FROM EMP02 WHERE DEPTNO>=10 AND DEPTNO=<20
+                                                                   *
+ERROR at line 1:
+ORA-00936: missing expression
+
+
+SQL>
+SQL> SELECT EMPNO, ENAME, DEPTNO FROM EMP02 WHERE DEPTNO>=10 AND DEPTNO<=20;
+SELECT EMPNO, ENAME, DEPTNO FROM EMP02 WHERE DEPTNO>=10 AND DEPTNO<=20
+                                 *
+ERROR at line 1:
+ORA-00942: table or view does not exist
+
+
+SQL>
+SQL> SELECT EMPNO, ENAME, DEPTNO FROM EMPA02 WHERE DEPTNO>=10 AND DEPTNO<=20;
+
+     EMPNO ENAME          DEPTNO
+---------- ---------- ----------
+      7839 KING               10
+      7782 CLARK              10
+      7566 JONES              20
+      7788 SCOTT              20
+      7369 SMITH              20
+      7876 ADAMS              20
+      7934 MILLER             10
+
+7 rows selected.
+
+SQL> SELECT ENAME, SAL FROM EMPA02 WHERE DEPTNO=20;
+
+ENAME             SAL
+---------- ----------
+JONES            2975
+SCOTT            3000
+SMITH             800
+ADAMS            1100
+
+SQL> SELECT ENAME AS "ALIAS NAME" FROM EMPA02 WHERE DEPTNO=20;
+
+ALIAS NAME
+----------
+JONES
+SCOTT
+SMITH
+ADAMS
+
+SQL> SELECT BNAME FROM DEPOSITA02 WHERE BNAME='ANIL';
+
+no rows selected
+
+SQL> SELECT * FROM DEPOSITA02
+  2  SELECT * FROM DEPOSITA02;
+SELECT * FROM DEPOSITA02
+*
+ERROR at line 2:
+ORA-00933: SQL command not properly ended
+
+
+SQL> SELECT * FROM DEPOSITA02;
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+101   SUNIL              AJNI                     5000 04-JAN-96
+102   MEHUL              KAROLBAGH                3500 17-NOV-95
+104   MADHURI            CHANDI                   1200 17-DEC-95
+105   PRMOD              MG ROAD                  3000 27-MAR-96
+106   SANDIP             ANDHERI                  2000 31-MAR-96
+107   SHIVANI            VIRAR                    1000 05-SEP-95
+108   KRANTI             NEHRU PLACE              5000 02-JUL-95
+109   MINU               POWAI                    7000 10-AUG-95
+
+9 rows selected.
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE BNAME='ANIL';
+
+no rows selected
+
+SQL> SELECT CNAME FROM DEPOSITA02 WHERE CNAME='ANIL';
+
+CNAME
+------------------
+ANIL
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME='ANIL';
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE 'ANIL';
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE 'A%';
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE '%A';
+
+no rows selected
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE '%A%';
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+104   MADHURI            CHANDI                   1200 17-DEC-95
+106   SANDIP             ANDHERI                  2000 31-MAR-96
+107   SHIVANI            VIRAR                    1000 05-SEP-95
+108   KRANTI             NEHRU PLACE              5000 02-JUL-95
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE 'A___';
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+
+SQL> SELECT * FROM DEPOSITA02 WHERE CNAME LIKE 'A__L';
+
+
+
+ACTO  CNAME              BNAME                  AMOUNT ADATE
+----- ------------------ ------------------ ---------- ---------
+100   ANIL               VRCE                     1000 01-MAR-95
+
+DESC TABLE
+ERROR:
+ORA-00931: missing identifier
+
+
+SQL> SELECT * FROM
+  2
+SQL>
+SQL> SELECT * FROM TAB;
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SYSCATALOG                     SYNONYM
+CATALOG                        SYNONYM
+TAB                            SYNONYM
+COL                            SYNONYM
+TABQUOTAS                      SYNONYM
+SYSFILES                       SYNONYM
+PUBLICSYN                      SYNONYM
+MVIEW$_ADV_WORKLOAD            TABLE
+MVIEW$_ADV_BASETABLE           TABLE
+MVIEW$_ADV_SQLDEPEND           TABLE
+MVIEW$_ADV_PRETTY              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_TEMP                TABLE
+MVIEW$_ADV_FILTER              TABLE
+MVIEW$_ADV_LOG                 TABLE
+MVIEW$_ADV_FILTERINSTANCE      TABLE
+MVIEW$_ADV_LEVEL               TABLE
+MVIEW$_ADV_ROLLUP              TABLE
+MVIEW$_ADV_AJG                 TABLE
+MVIEW$_ADV_FJG                 TABLE
+MVIEW$_ADV_GC                  TABLE
+MVIEW$_ADV_CLIQUE              TABLE
+MVIEW$_ADV_ELIGIBLE            TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW$_ADV_OUTPUT              TABLE
+MVIEW$_ADV_EXCEPTIONS          TABLE
+MVIEW$_ADV_PARAMETERS          TABLE
+MVIEW$_ADV_INFO                TABLE
+MVIEW$_ADV_JOURNAL             TABLE
+MVIEW$_ADV_PLAN                TABLE
+MVIEW_WORKLOAD                 VIEW
+MVIEW_FILTER                   VIEW
+MVIEW_LOG                      VIEW
+MVIEW_FILTERINSTANCE           VIEW
+MVIEW_RECOMMENDATIONS          VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+MVIEW_EVALUATIONS              VIEW
+MVIEW_EXCEPTIONS               VIEW
+AQ$_QUEUE_TABLES               TABLE
+AQ$_QUEUES                     TABLE
+AQ$_SCHEDULES                  TABLE
+AQ$_INTERNET_AGENTS            TABLE
+AQ$_INTERNET_AGENT_PRIVS       TABLE
+DEF$_AQCALL                    TABLE
+DEF$_AQERROR                   TABLE
+AQ$_DEF$_AQCALL_F              VIEW
+AQ$DEF$_AQCALL                 VIEW
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEF$_ERROR                     TABLE
+AQ$_DEF$_AQERROR_F             VIEW
+AQ$DEF$_AQERROR                VIEW
+DEF$_DESTINATION               TABLE
+DEF$_CALLDEST                  TABLE
+DEF$_DEFAULTDEST               TABLE
+DEF$_LOB                       TABLE
+DEF$_TEMP$LOB                  TABLE
+DEF$_PROPAGATOR                TABLE
+DEF$_ORIGIN                    TABLE
+DEF$_PUSHED_TRANSACTIONS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+OL$                            TABLE
+OL$HINTS                       TABLE
+OL$NODES                       TABLE
+LOGMNR_SESSION_EVOLVE$         TABLE
+LOGMNR_HEADER1$                TABLE
+LOGMNR_HEADER2$                TABLE
+LOGMNR_UID$                    TABLE
+LOGMNRC_DBNAME_UID_MAP         TABLE
+LOGMNR_DICTSTATE$              TABLE
+LOGMNR_DICTIONARY$             TABLE
+LOGMNR_OBJ$                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_USER$                   TABLE
+LOGMNRC_GTLO                   TABLE
+LOGMNRC_GTCS                   TABLE
+LOGMNRC_GSII                   TABLE
+LOGMNR_TAB$                    TABLE
+LOGMNR_COL$                    TABLE
+LOGMNR_ATTRCOL$                TABLE
+LOGMNR_TS$                     TABLE
+LOGMNR_IND$                    TABLE
+LOGMNR_TABPART$                TABLE
+LOGMNR_TABSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_TABCOMPART$             TABLE
+LOGMNR_TYPE$                   TABLE
+LOGMNR_COLTYPE$                TABLE
+LOGMNR_ATTRIBUTE$              TABLE
+LOGMNR_LOB$                    TABLE
+LOGMNR_CDEF$                   TABLE
+LOGMNR_CCOL$                   TABLE
+LOGMNR_ICOL$                   TABLE
+LOGMNR_LOBFRAG$                TABLE
+LOGMNR_INDPART$                TABLE
+LOGMNR_INDSUBPART$             TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_INDCOMPART$             TABLE
+LOGMNRP_CTAS_PART_MAP          TABLE
+LOGMNRT_MDDL$                  TABLE
+LOGMNR_LOG$                    TABLE
+LOGMNR_PROCESSED_LOG$          TABLE
+LOGMNR_SPILL$                  TABLE
+LOGMNR_AGE_SPILL$              TABLE
+LOGMNR_RESTART_CKPT_TXINFO$    TABLE
+LOGMNR_ERROR$                  TABLE
+LOGMNR_RESTART_CKPT$           TABLE
+LOGMNR_FILTER$                 TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGMNR_PARAMETER$              TABLE
+LOGMNR_SESSION$                TABLE
+LOGSTDBY$PARAMETERS            TABLE
+LOGSTDBY$EVENTS                TABLE
+LOGSTDBY$APPLY_PROGRESS        TABLE
+LOGSTDBY$APPLY_MILESTONE       TABLE
+LOGSTDBY$SCN                   TABLE
+LOGSTDBY$PLSQL                 TABLE
+LOGSTDBY$SKIP_TRANSACTION      TABLE
+LOGSTDBY$SKIP                  TABLE
+LOGSTDBY$SKIP_SUPPORT          TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+LOGSTDBY$HISTORY               TABLE
+REPCAT$_REPCAT                 TABLE
+REPCAT$_FLAVORS                TABLE
+REPCAT$_REPSCHEMA              TABLE
+REPCAT$_SNAPGROUP              TABLE
+REPCAT$_REPOBJECT              TABLE
+REPCAT$_REPCOLUMN              TABLE
+REPCAT$_KEY_COLUMNS            TABLE
+REPCAT$_GENERATED              TABLE
+REPCAT$_REPPROP                TABLE
+REPCAT$_REPCATLOG              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_DDL                    TABLE
+REPCAT$_REPGROUP_PRIVS         TABLE
+REPCAT$_PRIORITY_GROUP         TABLE
+REPCAT$_PRIORITY               TABLE
+REPCAT$_COLUMN_GROUP           TABLE
+REPCAT$_GROUPED_COLUMN         TABLE
+REPCAT$_CONFLICT               TABLE
+REPCAT$_RESOLUTION_METHOD      TABLE
+REPCAT$_RESOLUTION             TABLE
+REPCAT$_RESOLUTION_STATISTICS  TABLE
+REPCAT$_RESOL_STATS_CONTROL    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_PARAMETER_COLUMN       TABLE
+REPCAT$_AUDIT_ATTRIBUTE        TABLE
+REPCAT$_AUDIT_COLUMN           TABLE
+REPCAT$_FLAVOR_OBJECTS         TABLE
+REPCAT$_TEMPLATE_STATUS        TABLE
+REPCAT$_TEMPLATE_TYPES         TABLE
+REPCAT$_REFRESH_TEMPLATES      TABLE
+REPCAT$_USER_AUTHORIZATIONS    TABLE
+REPCAT$_OBJECT_TYPES           TABLE
+REPCAT$_TEMPLATE_REFGROUPS     TABLE
+REPCAT$_TEMPLATE_OBJECTS       TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+REPCAT$_TEMPLATE_PARMS         TABLE
+REPCAT$_OBJECT_PARMS           TABLE
+REPCAT$_USER_PARM_VALUES       TABLE
+REPCAT$_TEMPLATE_SITES         TABLE
+REPCAT$_SITE_OBJECTS           TABLE
+REPCAT$_RUNTIME_PARMS          TABLE
+REPCAT$_TEMPLATE_TARGETS       TABLE
+REPCAT$_EXCEPTIONS             TABLE
+REPCAT$_INSTANTIATION_DDL      TABLE
+REPCAT$_EXTENSION              TABLE
+REPCAT$_SITES_NEW              TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+SQLPLUS_PRODUCT_PROFILE        TABLE
+PRODUCT_PRIVS                  VIEW
+PRODUCT_USER_PROFILE           SYNONYM
+HELP                           TABLE
+DEPOSIT_E2                     TABLE
+DEPOSIT                        TABLE
+BRANCH_E2                      TABLE
+BRANCHA2                       TABLE
+CLIENTS                        TABLE
+BORROWA2                       TABLE
+BRANCHA02                      TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+BRANCHA1                       TABLE
+CLIENTSA1                      TABLE
+BORROWA1                       TABLE
+BRANCHAE3                      TABLE
+DEPOSIT_B1                     TABLE
+DEPOSITAE3                     TABLE
+BORROW                         TABLE
+DEPOSIT_E3                     TABLE
+BBRANCH_E3                     TABLE
+DEPOSIT_E_2                    TABLE
+CUSTOMER_E2                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+CUSTOMER                       TABLE
+BORROW_B1                      TABLE
+CUSTOMERS_B1                   TABLE
+EMP_E2                         TABLE
+BORROW_E3                      TABLE
+CUSTOMERS_E3                   TABLE
+DEPT_E2                        TABLE
+DEPTE2                         TABLE
+EMPAE3                         TABLE
+DEPOSITA1                      TABLE
+EMPLOYEE_E3                    TABLE
+
+TNAME                          TABTYPE  CLUSTERID
+------------------------------ ------- ----------
+DEPT_E3                        TABLE
+CUSTOMERA02                    TABLE
+BORROWA02                      TABLE
+DEPTAE3                        TABLE
+EMPA02                         TABLE
+DEPTA02                        TABLE
+DEPOSITA02                     TABLE
+DEPARTMENT_E3                  TABLE
+DEPT_E12                       TABLE
+
+196 rows selected.
+
+SQL> DESC EMPA02
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMPNO                                     NOT NULL NUMBER(4)
+ ENAME                                     NOT NULL VARCHAR2(10)
+ JOB                                                VARCHAR2(9)
+ MGR                                                NUMBER(4)
+ HIREDATE                                           DATE
+ SAL                                                NUMBER(7,2)
+ COMM                                               NUMBER(7,2)
+ DEPTNO                                             NUMBER(2)
+
+SQL> SELECT ENAME FROM EMPA02 WHERE ENAME IS NOT NULL;
+
+ENAME
+----------
+KING
+BLAKE
+CLARK
+JONES
+SCOTT
+SMITH
+ALLEN
+WARD
+MARTIN
+TURNER
+ADAMS
+
+ENAME
+----------
+JAMES
+MILLER
+
+13 rows selected.
+
+SQL> SELECT ENAME FROM EMPA02 WHERE ENAME IS NOT NULL AND ENAME LIKE '_A___';
+
+ENAME
+----------
+JAMES
+
+SQL> SELECT ENAME FROM EMPA02 WHERE ENAME IS NULL AND ENAME LIKE '__A%';
+
+no rows selected
+
+SQL> SELECT * FROM EMPA02 WHERE ENAME IS NULL AND ENAME LIKE '__A%';
+
+no rows selected
+
+SQL> SELECT * FROM EMPA02 WHERE ENAME LIKE '__A%';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7698 BLAKE      MANAGER              01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7876 ADAMS      CLERK           7768 23-MAY-87       1100
+        20
