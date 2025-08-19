@@ -24,3 +24,34 @@ CREATE TABLE Enrollments (
     CONSTRAINT pk_enrollments PRIMARY KEY (StudentID, CourseID)
 );
 
+--Assignment 3
+--1.	Add a new column PhoneNumber NUMBER(10) to the Students table.
+ALTER TABLE Students
+ADD PhoneNumber NUMBER(10);
+
+--2.	Set it as UNIQUE.
+ALTER TABLE Students
+ADD CONSTRAINT unique_phone UNIQUE (PhoneNumber);
+
+--3.	Add a NOT NULL constraint to CourseName in Courses (if not already present).
+ALTER TABLE Courses
+MODIFY CourseName VARCHAR2(50) NOT NULL;
+
+--4.	Add a CHECK constraint to ensure PhoneNumber starts with 9.
+ALTER TABLE Students
+ADD CONSTRAINT chk_phone_start9 CHECK (SUBSTR(TO_CHAR(PhoneNumber), 1, 1) = '9');
+
+--5.	Rename the PhoneNumber column in the Students table to ContactNumber.
+ALTER TABLE Students
+RENAME COLUMN PhoneNumber TO ContactNumber;
+
+--6.	Delete the Credits column from the Courses table
+ALTER TABLE Courses
+DROP COLUMN Credits;
+
+--7.	Delete the EnrollmentDate column from the Enrollments table.
+ALTER TABLE Enrollments
+DROP COLUMN EnrollmentDate;
+
+
+
