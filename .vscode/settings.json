@@ -4,6 +4,12 @@
         "FEBONACI.C": "cpp",
         "ABIQUEA0.C": "cpp",
         "ABI-4.C": "cpp",
-        "ABI-6.C": "cpp"
+        "ABI-6.C": "cpp",
+        "ABI-2.C": "cpp",
+        "Abi02QUEUE.C": "cpp",
+        "LINKABI0.C": "cpp",
+        "ABI9.C": "cpp",
+        "ABI10.C": "cpp",
+        "PRIME.C": "cpp"
     }
 }
