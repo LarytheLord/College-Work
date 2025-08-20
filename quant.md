@@ -1,24 +1,32 @@
-Essential Data Structures for Quants
+````markdown
+# Essential Data Structures for Quants
+
 Quantitative finance (quant) relies heavily on the right data structures to efficiently store, process, and analyze financial time series, portfolios, and models. Mastery of these structures is fundamental for strategy development and execution.
 
-1. Arrays and Vectors
-Use: Store sequential data like returns, prices, or signals.
+---
 
-Examples: Python list, NumPy array, C++ vector.
+## Arrays and Vectors
 
-text
+* **Use:** Store sequential data like returns, prices, or signals.
+* **Examples:** Python `list`, NumPy `array`, C++ `vector`.
+* **Visualization:** Often used for time series in backtesting.
+
+```mermaid
 graph TD
     Price1 --> Price2 --> Price3 --> PriceN
-Visualize with Mermaid
+````
 
-Often used for time series in backtesting.
+-----
 
-2. Matrices
-Use: Multidimensional data (e.g., price history of multiple assets, covariance matrices).
+## Matrices
 
-Examples: NumPy 2D arrays, pandas DataFrames.
+  * **Use:** Store multidimensional data (e.g., price history of multiple assets, covariance matrices).
+  * **Examples:** NumPy 2D arrays, pandas `DataFrame`s.
+  * **Visualization:** Useful for portfolio optimization and risk modeling.
 
-text
+<!-- end list -->
+
+```mermaid
 graph LR
     Asset1["Asset 1 Prices"]
     Asset2["Asset 2 Prices"]
@@ -26,76 +34,90 @@ graph LR
     Day1["Day 1"]
     Day2["Day 2"]
     Day3["Day 3"]
+
     Day1 --> Asset1
     Day1 --> Asset2
     Day1 --> Asset3
+
     Day2 --> Asset1
     Day2 --> Asset2
     Day2 --> Asset3
+
     Day3 --> Asset1
     Day3 --> Asset2
     Day3 --> Asset3
-Useful for portfolio optimization and risk modeling.
+```
 
-3. Hash Maps and Dictionaries
-Use: Rapid access to data keyed by instrument, date, or risk factor.
+-----
 
-Examples: Python dict, C++ std::map.
+## Hash Maps and Dictionaries
 
-text
+  * **Use:** Provide rapid access to data keyed by instrument, date, or risk factor.
+  * **Examples:** Python `dict`, C++ `std::map`.
+  * **Visualization:** Ideal for sparse datasets or irregular trading calendars.
+
+<!-- end list -->
+
+```mermaid
 graph TD
     A[Hash Map]
     A -->|Key=Date| B[Price]
     A -->|Key=Instrument| C[Risk Metric]
-Read more about dictionaries
+```
 
-Ideal for sparse datasets or irregular trading calendars.
+-----
 
-4. Specialized Financial Structures
-Bars: time bars, tick bars, volume bars, dollar bars—methods to aggregate price data for different market conditions and finer-grained analysis.
+## Specialized Financial Structures
 
-5. Visualizing Data Structures
-Example: Array Visualization
+  * **Bars:** Time bars, tick bars, volume bars, dollar bars—these are methods to aggregate price data for different market conditions and finer-grained analysis.
 
-![Array visualization sample]
+-----
 
-<!-- Substitute with your own local image or use a diagram tool output. Example images can be generated in Excel or using tools like draw.io. -->
-Example: Matrix (correlation heatmap)
+## Visualizing Data Structures
 
-![Matrix or heatmap illustration]
+  * **Array Visualization:** \![Array visualization sample]
+  * **Matrix (Correlation Heatmap):** \![Matrix or heatmap illustration]
+  * **More Visualizations:** For more Markdown visualizations and dashboard layouts, check out Omni Analytics’ examples and this R/Shiny/Flexdashboard walkthrough.
 
-<!-- Again, you can use a screenshot of a correlation matrix. -->
-For more Markdown visualizations and dashboard layouts, check out Omni Analytics’ examples and this R/Shiny/Flexdashboard walkthrough.
+-----
 
-Interactive Diagrams and Animations
-Create animated array and matrix transformations using GIFs (example on Giphy).
+## Interactive Diagrams and Animations
 
-Embed interactive Plotly plots in HTML markdown output (Plotly documentation).
+  * Create animated array and matrix transformations using GIFs (example on Giphy).
+  * Embed interactive Plotly plots in HTML Markdown output (Plotly documentation).
+  * **Flowchart Example:**
 
-text
+<!-- end list -->
+
+```mermaid
 flowchart LR
     Start --> ArrayInput
     ArrayInput --> MatrixOp
     MatrixOp --> DictionaryLookup
     DictionaryLookup --> End
-How to use Mermaid for your diagrams
+```
 
-Further Reading
-Markdown Guide for Data Visualization
+-----
 
-Typora Diagram Syntax Examples
+## Further Reading
 
-Getting Started with Markdown
+  * [Markdown Guide for Data Visualization](https://www.markdownguide.org/getting-started/)
+  * [Typora Diagram Syntax Examples](https://support.typora.io/Draw-Diagrams-With-Markdown/)
+  * [Getting Started with Markdown](https://info474-s17.github.io/book/markdown.html)
 
-Tip: Many Markdown editors and Jupyter Notebooks support shortcut rendering for LaTeX equations, charts, or even Mermaid diagrams for flowcharts, class hierarchies, and more.
+-----
 
-References:
+## References
 
-: https://docs.omni.co/docs/visualization-and-dashboards/visualization-types/markdown/examples
-: https://philipppro.github.io/data_visualisation/
-: https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams
-: https://support.typora.io/Draw-Diagrams-With-Markdown/
-: https://datavizm20.classes.andrewheiss.com/resource/markdown/
-: https://info474-s17.github.io/book/markdown.html
-: https://www.markdownguide.org/getting-started/
+  * [Omni Analytics](https://docs.omni.co/docs/visualization-and-dashboards/visualization-types/markdown/examples)
+  * [PhilippPro GitHub](https://philipppro.github.io/data_visualisation/)
+  * [GitHub Diagrams](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams)
+  * [Typora Docs](https://support.typora.io/Draw-Diagrams-With-Markdown/)
+  * [INFO 474 Class Notes](https://info474-s17.github.io/book/markdown.html)
+  * [Data Viz M20](https://datavizm20.classes.andrewheiss.com/resource/markdown/)
+  * [Markdown Guide](https://www.markdownguide.org/getting-started/)
 
+<!-- end list -->
+
+```
+```
