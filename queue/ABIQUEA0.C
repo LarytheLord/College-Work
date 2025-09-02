@@ -1,99 +1,100 @@
-#include<stdio.h>
-#include<conio.h>
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
 #define MAX 5
 
-// Declaring a queue using array
 int queue[MAX];
-int front = -1, rear = -1,i;
+int front = -1, rear = -1;
 
-int isFull() {
-    if (rear == MAX - 1) {
-	return 1;
-    }
-    return 0;
+int isfull() {
+    return rear == MAX - 1;
 }
 
-//check queue is empty
-int isEmpty() {
-    if (front == -1 || front > rear) {
-	return 1;
-    }
-    return 0;
+int isempty() {
+    return front == -1 || front > rear;
 }
 
-// add data to the queue
-void enqueue(int value) {
-    if (isFull()) {
-	printf("Queue is full, cannot enqueue.\n");
-    } else {
-	if (front == -1) {
-	    front = 0;  //moved front
-	}
-	rear++;
-	queue[rear] = value;
-	printf("Enqueued: %d\n", value);
+void enqueue(int data){
+    if(isfull()){
+        printf("\nQueue Overflow");
+        return; // Fixed: Removed return 0 for a void function
     }
+    if(front == -1){
+        front = 0;
+    }
+    rear++;
+    queue[rear] = data;
+    printf("\n%d queued into the queue", data); // Fixed: Removed the extra %d
 }
 
-// to pop data from the queue
-void dequeue() {
-    if (isEmpty()) {
-	printf("Queue is empty, cannot dequeue.\n");
-    } else {
-	printf("Dequeued: %d\n", queue[front]);
-	front++;
+void dequeue(){
+    if(isempty()){
+        printf("\nQueue is empty");
+    }
+    else{
+        int data = queue[front];
+        printf("\nDequeued element is %d", data);
+        front++;
     }
 }
 
-// Function to display the queue
-void display() {
-    if (isEmpty()) {
-	printf("Queue is empty.\n");
-    } else {
-	printf("Queue elements: ");
-	for (i = front; i <= rear; i++) {
-	    printf("%d ", queue[i]);
-	}
-	printf("\n");
+void peek(){
+    if(isempty()){
+        printf("\nQueue is empty");
+    }
+    else{
+        int data = queue[front];
+        printf("\nfront element is %d", data);
     }
 }
 
-int main() {
-    int choice, value;
-
-    while (1) {
-	printf("\nMenu:\n");
-	printf("1. Enqueue\n");
-	printf("2. Dequeue\n");
-	printf("3. Display\n");
-	printf("4. Exit\n");
-	printf("Enter your choice: ");
-	scanf("%d", &choice);
-
-	switch (choice) {
-	    case 1:
-		printf("Enter value to enqueue: ");
-		scanf("%d", &value);
-		enqueue(value);
-		break;
-	    case 2:
-		dequeue();
-		break;
-	    case 3:
-		display();
-		break;
-	    case 4:
-		return 0;
-	    default:
-		printf("Invalid choice. Try again.\n");
-	}
+void display(){
+    int i;
+    if(isempty()){
+        printf("\nQueue is empty");
+    }
+    else{
+        printf("\nThe elements of queue are:");
+        for(i = front; i <= rear; i++){
+            printf("%d ", queue[i]);
+        }
     }
 }
 
+void main(){
+    int ch, data;
+    clrscr();
+    while(1){
+        printf("\n\n Operations for queue");
+        printf("\n1. Enqueue");
+        printf("\n2. Dequeue");
+        printf("\n3. Peek");
+        printf("\n4. Display");
+        printf("\n5. Exit");
+        printf("\nEnter your choice:");
+        scanf("%d", &ch);
 
-
-
-
-
-
-
+        switch(ch){
+            case 1:
+                printf("\nData to be enqueued:");
+                scanf("%d", &data);
+                enqueue(data);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                peek();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                exit(0);
+                break;
+            default: // Fixed: Moved default case inside the switch block
+                printf("\nInvalid choice. Please try again.");
+        }
+        getch();
+    }
+}
