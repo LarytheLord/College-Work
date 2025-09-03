@@ -1,91 +1,88 @@
 #include<stdio.h>
 #include<conio.h>
 #include<stdlib.h>
-#define Max 5
 
-int stack[Max];
+#define MAX 5
+
+int stack[MAX];
 int top = -1;
 
-int isfull(){
-    return top == Max - 1;
+// Check if stack is full
+int isFull() {
+    return top == MAX - 1;
 }
 
-int isempty(){
+// Check if stack is empty
+int isEmpty() {
     return top == -1;
 }
 
-void push(int data){
-    if(isfull()){
-        printf("\nStack Overflow!");
-    }
-    else{
-        top++;
-        stack[top] = data;
-        printf("\n%d is inserted into the stack", data);
+// Push element into stack
+void push() {
+    int data;
+    printf("Enter element to push: ");
+    scanf("%d", &data);
+
+    if (isFull()) {
+        printf("Stack Overflow! Cannot push %d.\n", data);
+    } else {
+        stack[++top] = data;
+        printf("%d pushed into the stack.\n", data);
     }
 }
 
-int pop(){
-    if(isempty()){
-        printf("\nStack is Empty!");
-        return -1;
-    }
-    else{
-        int data = stack[top];
-        printf("\n%d popped out of the Stack", data);
-        top--;
-        return data;
+// Pop element from stack
+void pop() {
+    if (isEmpty()) {
+        printf("Stack Underflow! Stack is empty.\n");
+    } else {
+        printf("%d popped from the stack.\n", stack[top--]);
     }
 }
 
-int peek(){
-    if(isempty()){
-        printf("\nStack is Empty, cannot peek.");
-        return -1;
-    }
-    else{
-        int data = stack[top];
-        printf("\nThe top element is %d", data);
-        return data;
+// Peek: view top element
+void peek() {
+    if (isEmpty()) {
+        printf("Stack is empty. Cannot peek.\n");
+    } else {
+        printf("Top element: %d\n", stack[top]);
     }
 }
 
-void display(){
+// Display all elements (Top to Bottom)
+void display() {
     int i;
-    if(isempty()){
-        printf("\nStack is empty.");
-    }
-    else{
-        printf("\nStack elements (Top to Bottom):\n");
-        for(i = top; i >= 0; i--){
+    if (isEmpty()) {
+        printf("Stack is empty.\n");
+    } else {
+        printf("Stack (Top to Bottom):\n");
+        for (i = top; i >= 0; i--) {
             printf("%d\n", stack[i]);
         }
     }
 }
 
-void main(){
-    int ch, data, popped_val;
-    clrscr();
-    while(1){
-        printf("\n\n--- Stack Operations ---");
-        printf("\n1. Push");
-        printf("\n2. Pop");
-        printf("\n3. Peek");
-        printf("\n4. Display");
-        printf("\n5. Exit");
-        printf("\nEnter your choice: ");
+// Main function (as per Turbo C style)
+void main() {
+    int ch;
+    clrscr();  // Clear screen (Turbo C only)
+
+    while (1) {
+        printf("\n--- Stack Operations ---\n");
+        printf("1. Push\n");
+        printf("2. Pop\n");
+        printf("3. Peek\n");
+        printf("4. Display\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
         scanf("%d", &ch);
 
-        switch(ch){
+        switch (ch) {
             case 1:
-                printf("\nEnter the element to push: ");
-                scanf("%d", &data);
-                push(data);
+                push();
                 break;
             case 2:
-                popped_val = pop();
-                if(popped_val != -1){
-                }
+                pop();
                 break;
             case 3:
                 peek();
@@ -94,10 +91,12 @@ void main(){
                 display();
                 break;
             case 5:
+                printf("Exiting...\n");
                 exit(0);
             default:
-                printf("\nInvalid choice. Please try again.");
+                printf("Invalid choice! Please try again.\n");
         }
-        getch();
+        getch();  // Wait for keypress (Turbo C only)
+        clrscr(); // Clear screen for next menu
     }
 }
