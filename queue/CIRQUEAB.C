@@ -1,100 +1,103 @@
 #include <stdio.h>
 #include <conio.h>
-#define SIZE 5
+#include <stdlib.h>
+#define MAX 5
 
-int queue[SIZE];
+int cqueue[MAX];
 int front = -1, rear = -1;
 
-void enqueue(int value) {
-    if ((front == 0 && rear == SIZE - 1) || (rear == (front - 1 + SIZE) % SIZE)) {
-	printf("Queue is Full!\n");
-	return;
-    }
-
-    if (front == -1) { // First element
-	front = rear = 0;
-    } else if (rear == SIZE - 1 && front != 0) {
-	rear = 0;
-    } else {
-	rear++;
-    }
-
-    queue[rear] = value;
-    printf("Inserted %d\n", value);
+int isfull() {
+    return (rear + 1) % MAX == front;
 }
 
-// Function to delete element from circular queue
-void dequeue() {
+int isempty() {
+    return front == -1;
+}
+
+void enqueue(int data) {
+    if (isfull()) {
+        printf("\nCircular Queue is full!");
+        return;
+    }
     if (front == -1) {
-	printf("Queue is Empty!\n");
-	return;
+        front = 0;
     }
+    rear = (rear + 1) % MAX;
+    cqueue[rear] = data;
+    printf("\n%d enqueued to circular queue.", data);
+}
 
-    printf("Deleted %d\n", queue[front]);
-
+void dequeue() {
+    if (isempty()) {
+        printf("\nCircular Queue is empty!");
+        return;
+    }
+    int data = cqueue[front];
+    printf("\n%d dequeued from circular queue.", data);
     if (front == rear) {
-	front = rear = 0;
-    } else if (front == SIZE - 1) {
-	front = 0;
+        front = rear = -1;
     } else {
-	front++;
+        front = (front + 1) % MAX;
     }
 }
 
-// Function to display the circular queue
+void peek() {
+    if (isempty()) {
+        printf("\nCircular Queue is empty, no front element.");
+    } else {
+        printf("\nFront element is: %d", cqueue[front]);
+    }
+}
 void display() {
     int i;
-
-    if (front == -1) {
-	printf("Queue is Empty!\n");
-	return;
+    if (isempty()) {
+        printf("\nCircular Queue is empty.");
+    } else {
+        printf("\nCircular Queue elements are:\n");
+        i = front;
+        while (i != rear) {
+            printf("%d ", cqueue[i]);
+            i = (i + 1) % MAX;
+        }
+        printf("%d ", cqueue[i]);
     }
-
-    printf("Queue elements are: ");
-
-    if(rear >= front) {
-	for (i = front; i <= rear; i++)
-	    printf("%d ", queue[i]);
-    } else{
-	for (i = front; i < SIZE; i++)
-	    printf("%d ", queue[i]);
-	for (i = 0; i <= rear; i++)
-	    printf("%d ", queue[i]);
-
-    }
-
-    printf("\n");
 }
 
+
+
 void main() {
-    int choice, value;
-    clrscr();  // Clear screen (Turbo C specific)
-
+    int ch, data;
+    clrscr();
     while (1) {
-	printf("\nCircular Queue Menu\n");
-	printf("1. Enqueue\n");
-	printf("2. Dequeue\n");
-	printf("3. Display\n");
-	printf("4. Exit\n");
-	printf("Enter your choice: ");
-	scanf("%d", &choice);
+        printf("\n\n--- Circular Queue Operations ---");
+        printf("\n1. Enqueue");
+        printf("\n2. Dequeue");
+        printf("\n3. Peek");
+        printf("\n4. Display");
+        printf("\n5. Exit");
+        printf("\nEnter your choice: ");
+        scanf("%d", &ch);
 
-	switch (choice) {
-	case 1:
-	    printf("Enter value to insert: ");
-	    scanf("%d", &value);
-	    enqueue(value);
-	    break;
-	case 2:
-	    dequeue();
-	    break;
-	case 3:
-	    display();
-	    break;
-	case 4:
-	    exit(0);
-	default:
-	    printf("Invalid choice!\n");
-	}
+        switch (ch) {
+            case 1:
+                printf("\nEnter the data to enqueue: ");
+                scanf("%d", &data);
+                enqueue(data);
+                break;
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                peek();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+                exit(0);
+            default:
+                printf("\nInvalid choice. Please try again.");
+        }
+        getch();
     }
 }
